@@ -3,7 +3,7 @@
 Plugin Name: Pecan Pie
 Plugin URI: https://github.com/Duarte-Htag/pecan-pie
 Description: Intègre facilement Tarteaucitron.js avec Google Consent Mode.
-Version: 1.0.1
+Version: 1.1
 Author: Htag Digital
 Author URI: https://htag-digital.fr
 License: GPL2
