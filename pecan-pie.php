@@ -112,14 +112,15 @@ echo '<link rel="stylesheet" href="' . $plugin_url . $theme . '.css" />';
 
 
 
-// Gestion des mises à jour
-require plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
+// Gestion des mises à jour via GitHub (version 5.5+)
+require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/load-v5p5.php';
 
-$pecanPieUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/htag-digital/pecan-pie/',
-    __FILE__,
-    'pecan-pie'
-);
+if (class_exists('Puc_v5p5_Plugin_UpdateChecker')) {
+    $pecanPieUpdateChecker = Puc_v5p5_Plugin_UpdateChecker::buildUpdateChecker(
+        'https://github.com/Duarte-Htag/pecan-pie/',
+        __FILE__,
+        'pecan-pie'
+    );
 
-// Facultatif : si tu veux restreindre à une branche
-$pecanPieUpdateChecker->setBranch('main');
+    $pecanPieUpdateChecker->setBranch('main');
+}
