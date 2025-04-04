@@ -89,18 +89,6 @@ div#tarteaucitronRoot.tarteaucitronBeforeVisible:before {
 }
 
 
-#tarteaucitronAlertBig #tarteaucitronPersonalize2, .tarteaucitronCTAButton {
-    background: #f99675;
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 18px !important;
-    line-height: 1.2;
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-left: 7px;
-    border-radius: 35px;
-}
 
 
 #tarteaucitronAlertBig #tarteaucitronPersonalize2, .tarteaucitronCTAButton {
