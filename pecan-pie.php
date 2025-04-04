@@ -123,4 +123,5 @@ if (class_exists('Puc_v5p5_Plugin_UpdateChecker')) {
     );
 
     $pecanPieUpdateChecker->setBranch('main');
+    $pecanPieUpdateChecker->getVcsApi()->enableReleaseAssets(); // <-- Important
 }
