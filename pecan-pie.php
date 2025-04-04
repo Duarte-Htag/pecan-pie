@@ -115,13 +115,11 @@ echo '<link rel="stylesheet" href="' . $plugin_url . $theme . '.css" />';
 // Gestion des mises à jour via GitHub (version 5.5+)
 require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/load-v5p5.php';
 
-if (class_exists('Puc_v5p5_Plugin_UpdateChecker')) {
-    $pecanPieUpdateChecker = Puc_v5p5_Plugin_UpdateChecker::buildUpdateChecker(
-        'https://github.com/Duarte-Htag/pecan-pie/',
-        __FILE__,
-        'pecan-pie'
-    );
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-    $pecanPieUpdateChecker->setBranch('main');
-    $pecanPieUpdateChecker->getVcsApi()->enableReleaseAssets(); // <-- Important
-}
+$pecanPieUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://raw.githubusercontent.com/Duarte-Htag/pecan-pie/main/update.json',
+    __FILE__,
+    'pecan-pie'
+);
+
