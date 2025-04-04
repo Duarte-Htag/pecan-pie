@@ -29,9 +29,6 @@ font-size: 13px !important;
 font-size: 12px !important;
 }
 
-#tarteaucitronRoot * {
-font-size: 12px !important;
-}
 
 #tarteaucitronRoot .tarteaucitronDeny {
 font-size: 13px!important;
@@ -65,3 +62,24 @@ div#tarteaucitronAlertBig:before {
     content: '🍪' !important;
     font-size: 25px !important;
 }
+
+
+
+
+div#tarteaucitronRoot.tarteaucitronBeforeVisible:before {
+
+    background: rgba(0, 0, 0, .5) !important;
+}
+
+
+#tarteaucitronAlertBig #tarteaucitronPersonalize2, .tarteaucitronCTAButton {
+    background: #f99675 !important;
+    color: #333 !important;
+    font-size: 18px !important;
+    padding: 5px 10px !important;
+    border-radius: 35px !important;
+    padding: 10px 10px !important;
+    width: 90% !important;
+}
+
+
