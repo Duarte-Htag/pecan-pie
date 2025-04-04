@@ -3,7 +3,7 @@
 Plugin Name: Pecan Pie
 Plugin URI: https://github.com/Duarte-Htag/pecan-pie
 Description: Intègre facilement Tarteaucitron.js avec Google Consent Mode.
-Version: 1.1
+Version: 1.2
 Author: Htag Digital
 Author URI: https://htag-digital.fr
 License: GPL2
@@ -11,7 +11,6 @@ License: GPL2
 GitHub Plugin URI: https://github.com/Duarte-Htag/pecan-pie
 GitHub Branch: main
 */
-
 
 // Créer le menu d'administration
 add_action('admin_menu', function() {
@@ -63,63 +62,65 @@ add_action('wp_head', function() {
     $privacy_url = esc_js(get_option('pecan_pie_privacy_url', '/politique-de-confidentialite'));
     $theme = esc_attr(get_option('pecan_pie_theme', 'light'));
     $plugin_url = plugin_dir_url(__FILE__);
+    $icon_src = $plugin_url . 'imgs/pecan-pie-icon.png';
 
     echo '<script src="' . $plugin_url . 'tarteaucitron/tarteaucitron.min.js"></script>';
     echo "<script>
-tarteaucitron.init({
-  privacyUrl: '" . $privacy_url . "',
-  bodyPosition: 'top',
-  hashtag: '#cookies',
-  cookieName: 'tarteaucitron',
-  orientation: 'middle',
-  groupServices: true,
-  showDetailsOnClick: true,
-  serviceDefaultState: 'wait',
-  showAlertSmall: false,
-  cookieslist: false,
-  closePopup: true,
-  showIcon: true,
-  iconPosition: 'BottomLeft',
-  adblocker: false,
-  DenyAllCta: true,
-  AcceptAllCta: true,
-  highPrivacy: true,
-  alwaysNeedConsent: false,
-  handleBrowserDNTRequest: false,
-  removeCredit: true,
-  moreInfoLink: true,
-  useExternalCss: false,
-  useExternalJs: false,
-  readmoreLink: '',
-  mandatory: true,
-  mandatoryCta: false,
-  googleConsentMode: true,
-  bingConsentMode: true,
-  softConsentMode: false,
-  dataLayer: false,
-  serverSide: false,
-  partnersList: true
+    tarteaucitron.init({
+      privacyUrl: '" . $privacy_url . "',
+      bodyPosition: 'top',
+      hashtag: '#cookies',
+      cookieName: 'tarteaucitron',
+      orientation: 'middle',
+      groupServices: true,
+      showDetailsOnClick: true,
+      serviceDefaultState: 'wait',
+      showAlertSmall: false,
+      cookieslist: false,
+      closePopup: true,
+      showIcon: true,
+      iconSrc: '" . $icon_src . "',
+      iconPosition: 'BottomLeft',
+      adblocker: false,
+      DenyAllCta: true,
+      AcceptAllCta: true,
+      highPrivacy: true,
+      alwaysNeedConsent: false,
+      handleBrowserDNTRequest: false,
+      removeCredit: true,
+      moreInfoLink: true,
+      useExternalCss: false,
+      useExternalJs: false,
+      readmoreLink: '',
+      mandatory: true,
+      mandatoryCta: false,
+      googleConsentMode: true,
+      bingConsentMode: true,
+      softConsentMode: false,
+      dataLayer: false,
+      serverSide: false,
+      partnersList: true
+    });
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmanalyticsstorage');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmfunctionality');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmpersonalization');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmadsuserdata');
+    (tarteaucitron.job = tarteaucitron.job || []).push('gcmsecurity');
+    </script>";
+    echo '<link rel="stylesheet" href="' . $plugin_url . $theme . '.css" />';
 });
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmanalyticsstorage');
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmfunctionality');
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmpersonalization');
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmadsuserdata');
-(tarteaucitron.job = tarteaucitron.job || []).push('gcmsecurity');
-</script>";
-echo '<link rel="stylesheet" href="' . $plugin_url . $theme . '.css" />';
-});
-
-
 
 // Gestion des mises à jour via GitHub (version 5.5+)
 require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/load-v5p5.php';
 
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+if (class_exists('Puc_v5p5_Plugin_UpdateChecker')) {
+    $pecanPieUpdateChecker = Puc_v5p5_Plugin_UpdateChecker::buildUpdateChecker(
+        'https://github.com/Duarte-Htag/pecan-pie/',
+        __FILE__,
+        'pecan-pie'
+    );
 
-$pecanPieUpdateChecker = PucFactory::buildUpdateChecker(
-    'https://raw.githubusercontent.com/Duarte-Htag/pecan-pie/main/update.json',
-    __FILE__,
-    'pecan-pie'
-);
-
+    $pecanPieUpdateChecker->setBranch('main');
+    $pecanPieUpdateChecker->getVcsApi()->enableReleaseAssets();
+}
