@@ -1,15 +1,15 @@
 {
-  "name": "Pecan Pie",
-  "version": "1.2",
-  "download_url": "https://github.com/Duarte-Htag/pecan-pie/releases/download/v1.2/pecan-pie.zip",
-  "sections": {
-    "description": "🎯 Intègre facilement Tarteaucitron.js avec Google Consent Mode. \n\n🍪 Version 1.2 :\n- Amélioration des styles light & dark\n- Ajout d'une icône personnalisée 'pecan-pie-icon.png'"
-  },
-  "banners": {
-    "low": "",
-    "high": ""
-  },
-  "requires": "5.0",
-  "tested": "6.5",
-  "requires_php": "7.4"
-}
+    "name": "Pecan Pie",
+    "version": "1.2",
+    "download_url": "https://github.com/Duarte-Htag/pecan-pie/releases/download/v1.1/pecan-pie.zip",
+    "sections": {
+      "description": "Mise à jour automatique de Pecan Pie – plugin WordPress pour Tarteaucitron.js avec Google Consent Mode.",
+      "changelog": "v1.2 Release 4/4/2025 : Ajout du thème clair/sombre + système de mise à jour via GitHub."
+    },
+    "author": "Htag Digital",
+    "homepage": "https://htag-digital.fr",
+    "requires": "5.0",
+    "tested": "6.5",
+    "last_updated": "2025-04-04"
+  }
+  
