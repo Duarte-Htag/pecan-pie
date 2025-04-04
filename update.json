@@ -3,7 +3,7 @@
   "version": "1.2",
   "download_url": "https://github.com/Duarte-Htag/pecan-pie/releases/download/v1.2/pecan-pie.zip",
   "sections": {
-    "description": "🎯 Intègration facile Tarteaucitron.js avec Google Consent Mode. \n\n🍪 Version 1.2 :\n- Amélioration des styles light & dark\n- Ajout d'une icône personnalisée 'pecan-pie-icon.png'"
+    "description": "🎯 Intégration facile Tarteaucitron.js avec Google Consent Mode. \n\n🍪 Version 1.2 :\n- Amélioration des styles light & dark\n- Ajout d'une icône personnalisée 'pecan-pie-icon.png'"
   },
   "banners": {
     "low": "",
