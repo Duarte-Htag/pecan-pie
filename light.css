@@ -1,0 +1,114 @@
+#tarteaucitronRoot .tarteaucitronDeny {
+    background: #ffffff !important;
+}
+
+#tarteaucitronRoot .tarteaucitronDeny {
+    color: #101213 !important;
+}
+
+#tarteaucitronRoot .tarteaucitronCross::before {
+    color: #101213 !important;
+}
+
+#tarteaucitronRoot span#tarteaucitronDisclaimerAlert {
+font-size: 12px !important;
+}
+
+#tarteaucitronRoot div#tarteaucitronAlertBig {
+    width: 40% !important;
+    padding: 15px 5px !important;
+    background: #fff;
+    box-shadow: 0 0 9000px #999 !important;
+
+}
+
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert, #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong, #tarteaucitronAlertBig #tarteaucitronPrivacyUrl, #tarteaucitronAlertBig #tarteaucitronPrivacyUrlDialog, .tac_activate .tac_float strong {
+    color: #555 !important;
+}
+
+
+
+#tarteaucitronRoot #tarteaucitronAlertBig div.tarteaucitronPartnersList b {
+font-size: 13px !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAlertBig div.tarteaucitronPartnersList ul li {
+font-size: 12px !important;
+}
+
+#tarteaucitronRoot * {
+font-size: 12px !important;
+}
+
+#tarteaucitronRoot .tarteaucitronDeny {
+font-size: 13px!important;
+}
+
+#tarteaucitronAlertBig #tarteaucitronCloseAlert {
+font-size: 13px!important;
+}
+
+
+
+#tarteaucitronCloseCross {
+font-size: 1rem !important;
+}
+
+
+#tarteaucitronRoot #tarteaucitronAlertBig div.tarteaucitronPartnersList {
+background: #ffe17729 !important;
+padding: 10px !important;
+}
+
+
+
+#tarteaucitronIcon #tarteaucitronManager img {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+
+div#tarteaucitronAlertBig:before {
+    content: '🍪' !important;
+    font-size: 25px !important;
+    position: relative !important;
+    top: -30px !important;
+    background-color: #fff !important;
+    padding: 15px 20px !important;
+    border-radius: 100px !important;
+}
+
+#tarteaucitronCloseCross span {
+    color: #555 !important;
+}
+
+
+div#tarteaucitronRoot.tarteaucitronBeforeVisible:before {
+
+    background: rgba(0, 0, 0, .5) !important;
+}
+
+
+
+
+#tarteaucitronAlertBig #tarteaucitronPersonalize2, .tarteaucitronCTAButton {
+    background: #f99675 !important;
+    color: #333 !important;
+    font-size: 18px !important;
+    padding: 5px 10px !important;
+    border-radius: 35px !important;
+    padding: 10px 10px !important;
+    width: 90% !important;
+}
+
+
+#tarteaucitronRoot .tarteaucitronDeny, #tarteaucitronAlertBig #tarteaucitronCloseAlert {
+    font-size: 12px !important;
+    width: 20% !important;
+    color : #959595 !important;
+}
+
+
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert .tarteaucitronPartnersList * {
+    color: #000 !important;
+}
